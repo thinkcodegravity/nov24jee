@@ -1,3 +1,22 @@
+type of internet
+internet
+intranet
+lan
+ipv4
+ipv6
+lan ip
+wan ip
+domain name
+dns
+dhcp
+ports
+aws security group
+firewall
+
+
+
+
+
 internet - (WAN - worldwide area network) global computer network (billlions of device connected)
 	Wireline : copper/fiber - physical wireline / cable
 	Wireless : satelites (NOT wifi)
