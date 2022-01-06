@@ -96,7 +96,11 @@ source
 	1 hop - take left 5 mile on www road
 destination
 
-
+ipconfig : print LAN ip of your device
+ping : Check if remote machine is reachable
+telnet : Check if website app on remote machine is reachable
+tracert : check which hop is taking longer in the path
+netstat -a : check all ports open on your device
 
 
 ************* xml *******************
