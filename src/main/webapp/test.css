@@ -3,10 +3,26 @@
 	width:100%;
 	background:#ECF981;
 }
-#logo{
+
+input:hover{
+	border-style:solid; 
+}
+.logo{
 	height:10%;
 	width:100%;
 	background:orange;	
+	text-align:center;
+}
+#prd{
+	float:left;
+	background:red;
+	margin:5px;
+	padding:5px;
+	border-radius : 5px;
+}
+#prd:hover{
+		transform:rotate(90deg); 
+		transition-duration: 15s;
 }
 #popularLink{
 	height:10%;
@@ -32,4 +48,22 @@
 	width:90%;
 	background:white;		
 	float:left;	
+}
+#leftDisplay{
+	height:100%;
+	width:50%;
+	float:left;
+}
+#rightDisplay{
+	height:100%;
+	width:50%;
+	float:left;
+	font-size:20;
+	color :orange;
+	font-family:verdana;
+}
+#tmp
+{
+	height:100%;width:20%;background:grey;float:left;text-align: center;
+	transform:rotate(-20deg); 
 }

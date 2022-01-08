@@ -1,14 +1,95 @@
 <html>
-	<link href="test.css" rel="stylesheet" type="text/css"></link>  
+	<link href="test.css" rel="stylesheet" type="text/css"></link>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="test.js"></script>  
 	<div id="fullScreen">
-		<div id="logo">
+		<div class="logo">
+			<form action="/login">
+				userid <Input type="text"  name="uid" id="uid" >
+				<br>
+				password<Input type="password"  name="pwd" id="pwd" >
+				<br>
+				<Input type="submit" value="login"  >
+			</form>
 		</div>
 		<div id="popularLink">
+			<Input type="radio" name="vegetables">onion</input>
+			<Input type="radio" name="vegetables">tomato</input>
+			
+			<Input type="checkbox" name="fruits">mango</input>
+			<Input type="checkbox" name="fruits">grapes</input>
 		</div>
 		<div id="products">
 			<div id="filter">
+				<table border="1px">			
+					<tr>		
+						<td>john</td>	
+						<td>mike</td>	
+					</tr>		
+							
+							
+					<tr>		
+						<td>jane</td>	
+						<td>andy</td>	
+					</tr>		
+							
+				</table>			
+
 			</div>
 			<div id="display">
+				<div id="leftDisplay">
+						Reviews
+					<textarea rows="10" cols="50"></textarea>
+					<table>				
+						<tr>			
+							<td>User ID</td>		
+							<td><Input type="text"  name="uid" id="uid" ></td>		
+						</tr>		
+									
+						<tr>			
+							<td>Password</td>		
+							<td><Input type="password"  name="pwd" id="pwd" ></td>		
+						</tr>		
+						<tr>			
+							<td></td>		
+							<td><Input type="submit" value="login" id="loginbutton" ></td>		
+						</tr>			
+					</table>	
+					<ol>
+						<li>mango</li>
+						<li>grapes</li>
+						<li>banana</li>
+					</ol>
+					
+					<ul>
+						<li>onion</li>
+						<li>tomato</li>
+						<li>potato</li>
+					</ul>
+					
+					<select>
+						<option value="java"> java</option> 
+						<option value="jee"> jee</option> 
+						<option value=".net"> .net</option> 
+						<option value="html"> html</option> 
+					</select>
+					
+				</div>
+				<div id="rightDisplay">
+					
+					<div id="prd">
+						<img src="product.png">
+					</div>
+					 
+					<div id="prd">
+						<img src="product.png">
+					</div>
+					
+					<div id="prd">
+						<img src="product.png">
+					</div>
+					10% off on all products
+				</div>
 			</div>	
 		</div>
 	</div>

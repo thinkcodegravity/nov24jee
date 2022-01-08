@@ -180,6 +180,18 @@ Browser -
 	Text - Html code 
 	Grapics - CSS programs 
 	layout - CSS programs
+	Customer visit to website results in multiple downloads
+from the browser.
+	(hyper text - contains links to other resources)
+	HTML
+	CSS
+	Javascript
+	images
+	video
+	audio
+
+Header/ body/ footer
+
 ************* event listener **********
 
 events : activity triggered by customer actions
