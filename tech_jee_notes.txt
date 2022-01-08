@@ -150,6 +150,27 @@ attributes
 
 
 
+development
+testing
+build - archive all your website code into single war/jar file
+	maven tool
+deploy
+restart website
+
+Hyper Text Transfer Protocol
+	Link to other resources
+
+HTML
+	Hyper Text Markup Language
+	
+Browser - Http client software
+Tomcat - Http server software 
+
+Http status Code
+	2xx = Succesful transport
+	3xx = Successful but Redirect transport
+	4xx = Client related problem... digital/net resouces doesnt exist, you are not authorized.
+	5xx = Server side error
 
 ********* html *******
 Browser - 
