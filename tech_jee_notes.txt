@@ -280,6 +280,26 @@ $("#user").val(); = access customer typed
 	
 document.getElementById( "user")
 $("#user")
+
+tight coupled = Lot of dependancy between html and js
+	html programmer
+	javascript programmer
+	java programmer
+
+<div id="one">
+	<table id="two">asdasd</table>
+</div>
+
+<input type="text" id="three">
+A
+$("#two").parent()
+
+$("#one").html() = read u html code inside div id one
+	<table id="two">asdasd</table>
+$("#two").	text() = read text value between opening and closing target element
+$("#three").val() =read u customer typed text on webpage
+
+$("#three").val("mandatory") =write int text of webpage
 	
 *********************** Http ********************
 Hyper link

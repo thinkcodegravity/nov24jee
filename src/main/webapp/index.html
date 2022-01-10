@@ -1,18 +1,18 @@
 <html>
-	<link href="test.css" rel="stylesheet" type="text/css"></link>
+	<link href="css/test.css" rel="stylesheet" type="text/css"></link>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="test.js"></script>  
+	<script src="js/test.js"></script>  
 	<div id="fullScreen">
 		<div class="logo">
 			<form action="/login">
-				userid <Input type="text"  name="uid" id="uid" >
+				userid <Input type="text"  name="uid" id="uid" class="classuid" >
 				<br>
 				password<Input type="password"  name="pwd" id="pwd" >
 				<br>
-				<Input type="submit" value="login"  >
+				<Input type="submit" value="login" id="loginButton" >
 			</form>
 		</div>
-		<div id="popularLink">
+		<div id="popularLink" >
 			<Input type="radio" name="vegetables">onion</input>
 			<Input type="radio" name="vegetables">tomato</input>
 			
@@ -43,12 +43,12 @@
 					<table>				
 						<tr>			
 							<td>User ID</td>		
-							<td><Input type="text"  name="uid" id="uid" ></td>		
+							<td><Input type="text"  name="uid" id="tblUid" ></td>		
 						</tr>		
 									
 						<tr>			
 							<td>Password</td>		
-							<td><Input type="password"  name="pwd" id="pwd" ></td>		
+							<td><Input type="password"  name="pwd" id="tblPwd" ></td>		
 						</tr>		
 						<tr>			
 							<td></td>		
