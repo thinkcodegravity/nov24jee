@@ -332,7 +332,58 @@ Http
 		
 	
 **************** Data transfer / request generation from client **********
+communication between web client and server is through HTTP url
+Client : send data in the HTTP Request
+Server : responds with data in the same HTTP transaction
 
+Form submit :
+	Send data from client/browser to server
+	to a http URL : http://asdsad.com/login
+	uid=john&pwd=john1!
+	
+	http://localhost/login = mapped to a java program
+	?
+	uid=john&pwd=jane
+	
+	asdad asd aasd asdas asdsadas asd123123 123213
+	
+	html
+	id
+	name = data sent to the server
+	
+	url : endPoint = communication url
+	data : data sent to server
+	type : how do u want send data ? get/post
+	success : if communication between client server is success ?
+	failure : if communication between client server is failed?
+	
+
+	
+	JSON = javascript object notation
+	var javascriptObject={
+		city:"newyork",
+		state:"ny",
+		country:"usa",
+		zip:1234
+	}
+	JSON.stringify(javascriptObject) // converts js object into json object
+	json object are STRING representation of javascript object
+	var address={
+		"city":"newyork",
+		"state":"ny",
+		"country":"usa"
+		"zip":1234
+	}
+	JSON.parse(address); // converts json object into js object
+	<address>
+		<city>newyork</city>
+		<state>ny</state>
+		<country>usa</country>
+		<zip>1234</zip>
+	</address>
+	
+	
+	ajax
 	synchronous - customer voluntary submission from customer browser to server
 			clicking SUBMIT button
 			

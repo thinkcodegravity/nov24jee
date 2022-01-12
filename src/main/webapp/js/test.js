@@ -119,22 +119,20 @@ function checkIfEmpty() {
 }
 
 function checkUser() {
-	var checkUserAjaxObj = {
-		url: 'http://localhost/doesUserExist',
-		type: 'post',
-		data: {
-			eid: $("#emailTextBoxReg").val()
-		},
-		context: this,
-		success: function(data) {
-			if (data == "true")
-				alert("userid already taken");
-		},
-		error: function(data) {
-			console.log("failure");
-		}
-	};
-	$.ajax(checkUserAjaxObj);
+	var ajaxJavascriptObject={
+        url: '/checkUser',
+        type: 'post',
+        data: 'userid='+$("#uid").val(),
+        context: this,
+        success: function (data) {
+               if(data=="unavailable")
+		       alert("userid already taken");
+        },
+        error: function (data) {
+                  console.log("failure");
+        }
+    };
+    $.ajax(ajaxJavascriptObject);
 }
 function trackInput()
 {
@@ -160,7 +158,7 @@ function readWriteJquery (){
 		//$("#uid").val("please type userid");
 }
 $(document).ready(function() {
-	$("#uid").blur( readWriteJquery );
+	$("#uid").blur( checkUser );
 	$("input").click( trackInput );
 	$("#loginButton").click(checkIfEmpty);
 	$("#emailTextBoxReg").blur(checkUser);
