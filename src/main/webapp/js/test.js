@@ -158,7 +158,7 @@ function readWriteJquery (){
 		//$("#uid").val("please type userid");
 }
 $(document).ready(function() {
-	$("#uid").blur( checkUser );
+//	$("#uid").blur( checkUser );
 	$("input").click( trackInput );
 	$("#loginButton").click(checkIfEmpty);
 	$("#emailTextBoxReg").blur(checkUser);
