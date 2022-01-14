@@ -498,6 +498,11 @@ Servlet
 		every time a request comes to your servlet
 	destroy - override is optional server shuts down ( servlet object is destroyed )
 
+Request type
+	form data... key/value pair
+	binary = image/video
+	text = send text
+
 Response type category
 	webpage
 		redirect
@@ -527,7 +532,27 @@ status code
 	4XX : request not available/unauthorized
 	5XX : server had a problem ( server program had error/exception)
 	
+	JSP = Java Server Pages
+	Dynamic webpage
+	(java code + html) in the same file
 	
+HTML = Static webpage
+
+Spring MVC
+	Model View Controller
+	View : webpage... jsp...
+	Controller : controls URL , internet traffic routing
+		/success
+		/jsp/welcome.jsp
+	model : java program... search , shop, post
+	
+localhost/add2Cart
+	traffic routing/
+localhost/jsp/AddingInCart.jsp
+Spring mvc
+jsp
+servlet redirect/forwards
+session
 
 **************************************** Database **************************************** 
 

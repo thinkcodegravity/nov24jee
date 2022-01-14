@@ -15,7 +15,7 @@ public class LoginFilter implements Filter{
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		if(request.getRemoteAddr() .equals("0:0:0:0:0:0:0:1"))
+		if(request.getRemoteAddr() .equals("1.2.3.4"))
 			response.getWriter().write("customer blocked");
 		else 
 			chain.doFilter(request, response);		
