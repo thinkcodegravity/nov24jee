@@ -614,12 +614,20 @@ JDBC Client
 	2) JDBC api
 
 Steps to interact with database server software
-	1) establish Connection :
+	1) establish Connection : 
 		IP
 		Port
 		Userid
 		Password
 		Database schema
+project setup
+	1) add database dependancy in pom.xml
+	<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+	2) java program to build connection
+	3) java program to execute DML queries using jdbc api
 	
 Internet/network based software
 are located by IP and port
@@ -692,6 +700,10 @@ Spring data framework for interation with database
 	
 *********** webservice ***************
 
+Rest setup :
+	1) add rest and swagger dependancy in pom.xml
+	2) update componentscan in main application.java program with rest programs package name
+	
 WSDL : Web Service Description Language 
 	neutral/language independant
 	explaination of your webservice
