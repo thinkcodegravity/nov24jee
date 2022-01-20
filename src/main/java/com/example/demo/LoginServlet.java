@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -33,20 +34,20 @@ public class LoginServlet extends HttpServlet {
 			res.getWriter().close();	
 		}
 		*/
+		boolean loginDBCheck=false;
+		try {
+			Connection conn=DatabaseConnection.getDBConnection();
+			loginDBCheck=UsersTable.validateLogin(uid, pwd, conn);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		// sending webpage response to customers
-		if(uid.equals("john") && pwd.equals("john1!"))
+		if(loginDBCheck == true)
 		{
 			// additional notes being sent to next program
 			req.setAttribute("loginSuccess", true);
-			req.setAttribute("name", "john doe");
-			req.getRequestDispatcher("/success").forward(req, res);
-		}
-		else if(uid.equals("jane") && pwd.equals("jane1!"))
-		{
-			// additional notes being sent to next program
-			req.setAttribute("loginSuccess", true);
-			req.setAttribute("name", "jane doe");
+			req.setAttribute("name", "");
 			req.getRequestDispatcher("/success").forward(req, res);
 		}
 		else {

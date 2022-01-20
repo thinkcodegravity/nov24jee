@@ -643,17 +643,17 @@ OLTP : OnLine Transaction Processing
 	ALL or NOTHING
 // establish connection object
 Connection conn;
+Connection  con=DatabaseConnection.getDBConnection();
 try{
-	conn.setAutoCommit(false); // any successfull query execution is always temp until commit line
-	// execute queries
-	success : update warehouse table with latest stock - 100 to 95 ( Temprory)
-	failure : insert new order in csutomerorder table - mike customer order
-	conn.commit(); // permanently save all above temp DB change
-}catch(Exception e){
-	conn.rollback(); // all temp succesfull changes will be reverted/rollback
+	con.setAutoCommit(false);
+		// write Database activities code here
+	con.commit();
+}
+catch(Exception e){
+	con.rollback();
 }
 finally{
-	conn.close();
+	con.close();
 }
 
 

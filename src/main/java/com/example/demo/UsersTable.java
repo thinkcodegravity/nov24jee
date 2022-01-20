@@ -112,7 +112,7 @@ public class UsersTable {
         {
         	stmt = conn.
         			prepareStatement
-        			("select userid from users where userid =? and password=?");
+        			("select * from users where userid=? and password=?");
         	stmt.setString(1, userid);
         	stmt.setString(2, pwd);
             resultSet = stmt.executeQuery();
