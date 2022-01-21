@@ -700,10 +700,16 @@ Spring data framework for interation with database
 	
 *********** webservice ***************
 
+C to B
+B to B
+Microservice architecture
+
 Rest setup :
 	1) add rest and swagger dependancy in pom.xml
 	2) update componentscan in main application.java program with rest programs package name
-	
+
+
+
 WSDL : Web Service Description Language 
 	neutral/language independant
 	explaination of your webservice
@@ -766,6 +772,78 @@ Http Server Program : Servlets , Soap Webservice, Rest Web service, Struts Actio
 @WebService - Server program of type Soap Webservice
 @RestController - Server program of type Rest Webservice
 
+SOAP
+	Expedia inquiring about flight from NY to Chicago
+	http://aa.com/flightInquiryService	
+		public class Flight{
+			String source="NY";
+			String destination="Chicago";
+		}
+				JAXB = JAva to Xml binding = java into xml = Marshalling
+									      xml into java = Unmarshalling
+		<flight>
+			<source>NY</source>
+			<destination>Chicago</destination>
+		</flight>
+		
+	American Airline will respond with all flights for the above src and desti
+		<flights>
+			<flight>AA202</flight>
+			<flight>AA225</flight>
+			<flight>AA345</flight>
+		</flights>
+	
+REST
+	http://aa.com/flightInquiryService/NY/Chicago	
+	http://aa.com/flightInquiryService?src=NY&dest=Chicago	
+	http://aa.com/flightInquiryService
+		{
+			"src":"NY",
+			"dest":"Chicago"
+		}
+	http://aa.com/flightInquiryService
+	<flight>
+		<source>NY</source>
+		<destination>Chicago</destination>
+	</flight>
+
+		
+		
+JAXB = Java to Xml Binding
+		Xml into Java
+		
+		
+		
+		
+		
+		
+@WebService		
+public class Calculator{
+	public int add(int a, int b){
+		return a+b;
+	}
+}
+
+
+
+public int calculateRectangle(int input1, int input2)
+
+WSDL = WebService Description language
+<operation name="calculateRectangle" parameterOrder="arg0 arg1">
+
+<message name="calculateRectangle">
+	<part name="arg0" type="xsd:int"/>
+	<part name="arg1" type="xsd:int"/>
+</message>
+<message name="calculateRectangleResponse">
+	<part name="return" type="xsd:int"/>
+</message>
+
+
+
+<input wsam:Action="http://soap.webservice.tutorial.com/Math/calculateRectangleRequest" message="tns:calculateRectangle"/>
+<output wsam:Action="http://soap.webservice.tutorial.com/Math/calculateRectangleResponse" message="tns:calculateRectangleResponse"/>
+</operation>
 	
 Soap UI - Http Client : Used for testing Soap webserive , Rest webservice for Get/Post methods
 Postman - Http Client : Used for testing Soap/Rest webservice for all http methods (Get/post/put etc)
