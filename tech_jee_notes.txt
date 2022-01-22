@@ -730,12 +730,17 @@ Soap stub class : webservice consumer program
 input/output : primitive data type or string (choose RPC)
 input/output : complex data type arraylist, Student (choose Document)
 
-
+soap binding style
 RPC ; cannot be validated( does not include schema in wsdl file)
 Document ; can be validated (include schema in wsdl file)
 
 Schema in wsdl file are responsible for VALIDATIONS
+	Soap webservice
+	top - down approach - wsdl file , then java program (WSDL 2 Java )
+	bottom up approach - Simple pojo (plain old java object), WSDL
+			file is then generated
 	
+
 	
 Document
 	literal : schema includes only input/output data type
