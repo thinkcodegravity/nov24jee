@@ -991,7 +991,20 @@ Servlet responsibilities :
 		text "res.getWriter", 
 		binary "res.getoutputstream"
 
+1) add struts dependancy
+2) main application.java program u need to configure struts filter class
+3) src/main/resources folder create struts.xml file
 
+
+Webpage button processing
+1) in struts.xml configure action name
+	link this action to a java program and method
+2) in linked java program
+	create String variable EXACTLY similar as name attribute in html text box
+	in the linked method... write the code/logic
+3) in struts.xml configure appropriate response for String return type
+	
+	
 Servlet to strut upgrade:
 	1) URL mapping : in struts.xml create action element
 		map url to a class and method
@@ -1083,7 +1096,13 @@ JSP code
 	<%
 	}
 	
+	<s:textfield name="userId" label="Id" />
+<input type="text" name="uid"/>
 	
+	
+Html Code - STRUT UI TAG
+Java Code - STRUT CONTROL TAG
+Data - STRUT DATA TAG		
 	// read collection appendedLists in struts tag libbrary
 	<s:iterator value="%{#appendedLists}">  
 	  <li>

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-// http://ip:port/checkUser
+// http://ip:port/login
 // /checkUser
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
