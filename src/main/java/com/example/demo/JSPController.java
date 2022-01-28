@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class JSPController {
 	// http://ipaddress:port/success
+	//http://ipaddress:port/<prefix><return><suffix>
+	//http://ipaddress:port/jsp/welcome.jsp
+	
 	@RequestMapping("/success")
 	public String welcome() {
 		return "welcome";

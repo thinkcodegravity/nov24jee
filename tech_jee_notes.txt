@@ -1174,6 +1174,17 @@ Dependancy injection ?
 		webservices code
 		
 		
+@Configuration = Spring class responsible for creating object
+	
+@Controller = Spring class controller job.. URL routing
+	@Controller = Spring MVC... to route a URL to webpage
+	@RestController = URL Mapping to a method
+
+@Service = Business logic program
+
+@Repository = database interaction
+
+
 		
 		
 		
