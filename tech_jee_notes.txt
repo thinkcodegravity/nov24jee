@@ -1286,95 +1286,57 @@ ICar ic;
 
 
 ******* spring aspects **********
-Spring aspects : cross cutting concerns.. additional
-	code unreleated to core business logic, but
-	required for managing, debugging,running
-	a website successfully.
-	
-	package com.amazon.pqr;
-	public class ProfileUser{
-		10 methods
+package com.amazon.shopping;
+public class Order{
+	public String cancelOrder(String s){
 	}
-	package com.amazon.pqr;
-	public class Shopping{
-		20 methods
+	public String editOrder(String s,int a){
 	}
-	package com.amazon.abcd;
-	public class OrderUser{
-		5 methods
+	public int placeOrder(String s){
 	}
-	package com.amazon.abcd;
-	public class Review{
-		25 methods
+}
+package com.amazon.login;
+public class Profile{
+	public String register(String s,String b){
 	}
-	
-	
-	
-	
-	package com.amazon.pqr;
-	public class Profile{
-		public void login(String userid, String password){	
-			ssadasdsadasda
-		}
-		public int register(String userid, String password){	
-			ssadasdsadasda
-		}
-		public void unsubscribe(String userid){
-			asdsadad
-		}
-		public String changePass(String uid,String pwd){
-			sdsdsfsd
-		}
+	public String login(String s){
 	}
-	package com.amazon.abcd;
-	public class Shopping{
-		public void add2Cart(String prodName,int quantity){	
-			ssadasdsadasda
-		}
-		public void removeFromCart(String prodName){	
-			ssadasdsadasda
-		}
-		public void checkout(){
-			asdsadad
-		}
+	public boolean changePasword(String s){
 	}
-	
-	
-	public class Strut{
-		@autowired
-		Shopping s;
-		public void method(){
-			sysout("in strut");
-			s.add2Cart("iphone");
-		}
-	}
-	@Aspect
-	public class ShoppingAspect{
-		@Around("within (com.amazon..*)")
-		public void abcd( ProceedingJoinPoint pj){
-			sysout("hi entering");
-				pj.proceed();
-			sysout("bye bye leaving");
-		}
-	}
-	package com.amazon.abcd;
-	@Service 
-	public class Shopping{
-		public int add2Cart(String prodName){	
-			sysout("in shopping spring");
-			int i=10/0; // exception thrown
-			return i;
-		}
-	}	
-	STRUT >>>      ShoppingAspect  >>> Shopping
-	in strut
-	hi entering
-	in shopping spring
-	bye bye leaving
-	
+}
+
+
+Before – takes parameter joinPoint. Is procesed before joinpoint.
+		add code 	before target method
+
+After – takes parameter joinPoint. Is procesed after joinpoint, either after successful process or exception.
+		add code 	before target method
+
+Around – takes parameter joinPoint. Is procesed after joinpoint, either after successful process or exception.
+		add little bit of code  before target method AND little bit after the target method
+
+AfterReturning – takes parameter joinPoint. Is procesed only if successful execution.
+		Successfully completed - then extra code is added
+AfterThrowing – takes parameter joinPoint. Is procesed only if exception.
+		program has exceptions - then extra code is added
 
 
 
+@Before("execution ( * com.amazon.shopping.Order.*(String) )   || execution ( int com.amazon.shopping.Order.*(*) ) ")
+	public void getResponseTime( ) throws Throwable{
+		// ******************** SECURITY *************************
+		System.out.println("\n\n >>>>>>>>>>> PERFORMING SECURITY CHECK >>>>>>>>>>>");
+		String remoteAddress = ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes())
+			       .getRequest().getRemoteAddr();
+		if(remoteAddress.equals("1.2.3.4")) {
+			System.out.println("client is blocked for security reason");
+			throw new Exception("Blocked Customer");
+		}
+		
+		// ******************** LOGGING *************************		
+		System.out.println("\n\n >>>>>>>>>>> SPRING ASPECT LOGGING >>>>>>>>>>>");
+	}
+	
 ********* Spring data *************
 
 
