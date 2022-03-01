@@ -1412,3 +1412,110 @@ p1.prod="Iphone"; p1.quantity=100;
 repo.delete(p1);
 
 
+
+
+
+If Using findBy
+1) create select sql query to search by first name
+	select * from users where first_name='john'
+2) execute the query
+3) result is stored in entity objects
+	1st entity object = andy, xyz,johnm ny null
+	2nd entity object = mon xyz john boston null
+	3rd entity object = john123 xyz john chicao null
+4) add all 3 entity object in store in a collection list
+
+
+Custom query provided in repository
+1) take your query
+2) dynamic binding = replacing question marks with input you pass
+3) execute new query
+4) results from query is stored in list / collection of entity object
+5) return list result
+
+
+
+
+SQL query = query is written with reference to database table and column names
+	@Query(value="select * from users where first_name =?1 or last_name=?2", nativeQuery=true)
+	public List<UsersEntity> searchByNativeQuery(String a,String b);
+
+JPQL = query is written with reference to entity class and variable names	
+	@Query("select u from UserEntity u where u.fName=?1 or u.lName=?2")
+	public List<UsersEntity> searchByJPQLQuery(String a,String b);
+
+
+Development
+
+
+	Unit Testing : test individual application layer/programs/methods
+	System Testing : End to End testing.... Entire project as a whole is tested
+	Integration Testing : Project communicating with programs in other project/system/company/business
+	Pre-production Testing : pre-production is a testing setup... replica of production setup.
+	Production Testing: post internet-launch... do the testing.
+
+
+Live/ on the internet/ Production
+
+
+
+Login page = "Test suite" for login page (group of test cases/ scenario)
+each and every scenario below... "test case"
+	1) Enter userid , didnot enter password = false
+		@Test
+		public void emptyPassword(){
+			Login lo=new Login();
+			boolean result=lo.verifyCredentials("john","");
+			assertFalse(result); // verify if result variable has value false
+		}
+	2) Enter password, didnot enter userid = false
+		@Test
+		public void emptyUserid(){
+			Login lo=new Login();
+			boolean result=lo.verifyCredentials("","asda");
+			assertFalse(result); // verify if result variable has value false
+		}
+	3) Didnt enter userid and password = false
+	4) Correct userid but wrong password = false
+	5) Correct password but wrong userid = false
+	6) Wrong userid and password = false
+	7)Correct userid and correct password = true
+
+	public class Login{
+		public boolean verifyCredentials(String userid,String password)
+		{
+			fsfdsf
+			sdfsdfds
+			sdfsdfs
+		}
+	}
+	
+	
+	
+	register
+	login
+	change password
+	unregister
+	
+	
+	
+Browser on click of submit button
+	
+1) request
+	INPUT
+	key-value = text box:customer typed input
+	userid:ron
+	pwd:ron1!
+	
+	URL
+	/registration
+	
+2) response
+	success
+	
+	
+	
+	
+	
+	
+	
